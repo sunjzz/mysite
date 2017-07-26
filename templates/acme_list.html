@@ -10,30 +10,24 @@
 <body>
 
 <table class="table table-striped">
-	<caption>条纹表格布局</caption>
+	<caption>书籍列表</caption>
 	<thead>
 		<tr>
-			<th>名称</th>
-			<th>城市</th>
-			<th>邮编</th>
+			<th>书名</th>
+			<th>作者</th>
+			<th>出版机构</th>
+			<th>出版时间</th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
-			<td>Tanmay</td>
-			<td>Bangalore</td>
-			<td>560001</td>
+    {% for book in book_list %}
+        <tr>
+			<td>{{ book.title }}</td>
+			<td>{{ book.authors }}</td>
+			<td>{{ book.publisher }}</td>
+			<td>{{ book.publication_date }}</td>
 		</tr>
-		<tr>
-			<td>Sachin</td>
-			<td>Mumbai</td>
-			<td>400003</td>
-		</tr>
-		<tr>
-			<td>Uma</td>
-			<td>Pune</td>
-			<td>411027</td>
-		</tr>
+    {% endfor %}
 	</tbody>
 </table>
 
